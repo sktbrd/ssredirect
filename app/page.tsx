@@ -34,7 +34,7 @@ const TwitterRedirect = () => {
       window.location.href = 'https://shapeshift.com/rareevo';
     } catch (error) {
       if ((error as any).status === 429 && retryCount < maxRetries) {
-        console.log(`Rate limit reached. Retrying after ${backoffDelay}ms...`);
+        console.log(`Rate limit reachedd. Retrying after ${backoffDelay}ms...`);
         await delay(backoffDelay);
         generateTweet(retryCount + 1);
       } else {
